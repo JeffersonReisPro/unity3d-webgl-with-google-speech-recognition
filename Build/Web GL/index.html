@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web GL  | Web GL with Google Speech Recogniton</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+	<!-- ########################################################## -->
+	<link rel="stylesheet" type="text/css" href="TemplateData/SpeechRecognitionStyle.css">
+	<!-- ########################################################## -->
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData/UnityProgress.js"></script>
+	
+	
+	
+	
+	
+	
+  </head>
+ 
+ <body class="template">
+  
+  <p class="header"><span>Unity Web GL  | </span>Web GL with Google Speech Recogniton</p>
+  
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="480px" width="800px" style=" margin-top: 20px;" ></canvas>
+      <br>
+      <div class="logo"></div>
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+      <div class="title">Web GL with Google Speech Recogniton</div>
+				
+		<!-- ########################################################## -->
+				
+		<br>
+		<br>
+		<br>		
+		
+		<div id="info">
+			<p id="info_start">Click on the microphone icon and begin speaking.</p>
+			<p id="info_speak_now">Speak now.</p>
+			<p id="info_no_speech">No speech was detected. You may need to adjust your
+			<a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+			  microphone settings</a>.</p>
+			<p id="info_no_microphone" style="display:none">
+			No microphone was found. Ensure that a microphone is installed and that
+			<a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+			microphone settings</a> are configured correctly.</p>
+			<p id="info_allow">Click the "Allow" button above to enable your microphone.</p>
+			<p id="info_denied">Permission to use microphone was denied.</p>
+			<p id="info_blocked">Permission to use microphone is blocked. To change,
+			go to chrome://settings/contentExceptions#media-stream</p>
+			<p id="info_upgrade">Web Speech API is not supported by this browser.
+			 Upgrade to <a href="//www.google.com/chrome">Chrome</a>
+			 version 25 or later.</p>
+		</div>
+	
+	
+		<div class="right">
+			<button id="start_button" onclick="startButton(event)">
+			<img id="start_img" src="img/mic.gif" alt="Start"></button>
+		</div>
+
+		<div id="results">
+		  <span id="final_span" class="final"></span>
+		  <span id="interim_span" class="interim"></span>
+		  <p>
+		</div>
+	
+		<div class="center">
+   
+		  <p>
+		  <div id="div_language">
+				<select id="select_language" onchange="updateCountry()"></select>
+				&nbsp;&nbsp;
+				<select id="select_dialect"></select>
+		  </div>
+		  
+		</div>
+		
+		<br>
+		<br>	
+		
+		<!-- ########################################################## -->	
+	
+	</div>
+	
+    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <script type='text/javascript'>
+	var Module = {
+		TOTAL_MEMORY: 268435456,
+		errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+		compatibilitycheck: null,
+		dataUrl: "Release/Web GL.data",
+		codeUrl: "Release/Web GL.js",
+		memUrl: "Release/Web GL.mem",
+	};
+	</script>
+	<script src="Release/UnityLoader.js"></script>
+
+	
+	
+	<!-- ########################################################## -->					
+	<script src="TemplateData/SpeechRecognitionScript.js"></script>
+	<!-- ########################################################## -->
+	
+	
+	
+  </body>
+  
+</html>
